@@ -29,7 +29,7 @@ export default function Register() {
     };
 
     try {
-      const res = await fetch("https://server-hisg.onrender.com/api/register", {
+      const res = await fetch("https://server-hisg.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
