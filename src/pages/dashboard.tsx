@@ -33,15 +33,25 @@ export default function Dashboard() {
         Your Health Dashboard
       </h1>
 
+      <div className="flex justify-end mb-4">
+        <a
+          href="/profile"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+        >
+          Go to Profile
+        </a>
+      </div>
+
       {/* GRID LAYOUT */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
         {/* WELLNESS SCORE */}
         <div className="bg-white p-6 rounded-xl shadow-md md:col-span-2">
           <h2 className="text-xl font-semibold mb-4">Overall Wellness Score</h2>
 
           <div className="flex items-center gap-6">
-            <div className="text-5xl font-bold text-blue-700">{wellnessScore}%</div>
+            <div className="text-5xl font-bold text-blue-700">
+              {wellnessScore}%
+            </div>
 
             <div className="flex-1">
               <div className="w-full bg-gray-200 h-3 rounded-full">
@@ -61,9 +71,15 @@ export default function Dashboard() {
         <div className="bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-xl font-semibold mb-4">Today's Summary</h2>
           <div className="space-y-3 text-gray-700">
-            <p><strong>Steps:</strong> {steps}</p>
-            <p><strong>Sleep:</strong> {sleep} hrs</p>
-            <p><strong>Hydration:</strong> {hydration} L</p>
+            <p>
+              <strong>Steps:</strong> {steps}
+            </p>
+            <p>
+              <strong>Sleep:</strong> {sleep} hrs
+            </p>
+            <p>
+              <strong>Hydration:</strong> {hydration} L
+            </p>
           </div>
 
           <button className="w-full mt-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
